@@ -69,13 +69,15 @@ def winner
   end
 
   def play
-    until self.over? do
-      self.turn
-    end
-    puts "Congratulations X!" if winner == "X"
-    puts "Congratulations O!" if winner == "O"
-    puts "Cat's Game!" if draw?
+    def play 
+    turn until over?
+    if won?
+      puts "Congratulations #{winner}!"
+    elsif draw?
+      puts "Cat's Game!"
+    end 
   end
+end 
 
 
 end
