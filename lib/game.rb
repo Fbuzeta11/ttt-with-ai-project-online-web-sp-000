@@ -35,12 +35,12 @@ end
 end
 
 def draw?
-board.full? && !won?
-end
-
-def over?
-  board.full? && draw? || won?
-end
+    board.full? && !won? ? true : false 
+  end 
+  
+  def over?
+    (won? || draw?) ? true :false
+  end 
 
 def winner
     WIN_COMBINATIONS.each do |combo|
