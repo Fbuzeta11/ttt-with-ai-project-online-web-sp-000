@@ -68,7 +68,7 @@ def winner
     board.valid_move?(input) ? @board.update(input, current_player) : turn
   end
 
-  def play
+  
     def play 
     turn until over?
     if won?
